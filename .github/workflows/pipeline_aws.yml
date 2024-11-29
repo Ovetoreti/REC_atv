@@ -25,4 +25,4 @@ jobs:
       run: |
             echo "Conectando no EC2"
             echo "${{secrets.AWS_KEY}}" > private_key && chmod 600 private_key
-            ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-34-200-41-162.compute-1.amazonaws.com "cd REC_atv/;git pull; ./session.sh"
+            ssh -T -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-34-200-41-162.compute-1.amazonaws.com "cd REC_atv/; git pull; ./session.sh"
