@@ -30,4 +30,4 @@ jobs:
         echo "Verificando chave privada"
         ls -la private_key
         echo "Iniciando conexão com o servidor"
-        ssh -T -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-34-200-41-162.compute-1.amazonaws.com "cd REC_atv/; git pull; ./session.sh"
+        ssh -T -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-34-200-41-162.compute-1.amazonaws.com "cd REC_atv/; git pull; bash ./session.sh"
